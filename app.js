@@ -14,6 +14,7 @@ function addNote(e) {
     const noteContainer = document.createElement('div')
     const noteContent = document.createElement('p')
     const deleteNote = document.createElement('div')
+    
     if (noteInput.value.length == 0) {
         alert('Il faut que votre note contienne quelquechose!')
     } else {
@@ -22,6 +23,7 @@ function addNote(e) {
         noteContainer.classList.add('note-container')
         noteContainer.setAttribute('draggable', 'true')
         noteContainer.style.border = `${color.value} 2px solid`
+        noteInput.value = ''
 
         const deleteBtn = document.querySelectorAll('.delete')
         for (const i of deleteBtn) {
